@@ -24,4 +24,8 @@ function doShit(currentPosition) {
 	})
 }
 
-navigator.geolocation.getCurrentPosition(doShit);
+function showInstructions(position_error) {
+	$("body").html("Oh no! Can't get your location. Try turning on Location Services (on iPhones, this is in Settings -> Privacy -> Location Services -> Safari)")
+}
+
+navigator.geolocation.getCurrentPosition(doShit, showInstructions)
