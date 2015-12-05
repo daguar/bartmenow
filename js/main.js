@@ -20,7 +20,7 @@ function doShit(currentPosition) {
 		})
 		nearest_station_acronym = geolib.findNearest(my_location, compressed_stations).key
 		url = "http://m.bart.gov/schedules/eta?stn=" + nearest_station_acronym;
-		$("#bart_iframe").html("<iframe src='" + url +"' width=\"100%\" height=\"100%\" frameborder='0'></iframe>")
+                window.location.replace(url);
 	})
 }
 
